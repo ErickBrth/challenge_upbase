@@ -4,29 +4,39 @@ export const Container = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
 `;
 
 export const WelcomeText = styled.h1`
   font-size: 24px;
+  align-self: start;
   color: #333;
 `;
 
 export const ButtonGroup = styled.div`
   margin-top: 20px;
   display: flex;
-  gap: 10px;
+  gap: 12px;
 `;
 
 export const Button = styled.button`
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
+  padding: 6px 20px;
+  border: ${(props) => (props.primary ? 'none' : '1px solid #00000029')};
+  border-radius: 8px;
+  font-size: 12px;
   cursor: pointer;
+  text-align: center;
+  line-height: 16px;
+  font-family: 'Jura', sans-serif;
 
-  background-color: ${(props) => (props.primary ? '#8000FF' : '#CCC')};
+  background-color: ${(props) => (props.primary ? '#8000FF' : '#FFF')};
   color: ${(props) => (props.primary ? '#FFF' : '#000')};
+
 
   &:hover {
     background-color: ${(props) => (props.primary ? '#5a00cc' : '#E0E0E0')};

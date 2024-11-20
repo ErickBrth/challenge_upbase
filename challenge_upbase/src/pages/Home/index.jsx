@@ -9,14 +9,20 @@ import {
   CardContent,
   CardTitle,
   CardSubtitle,
+  Wrapper
 } from './styles';
-import RegisterPropertyButton from '../../Components/RegisterButton';
+import { RegisterButton } from '../../Components/RegisterButton'
+import { ArrowBack } from '../../Components/ArrowBack';
 
 function Home() {
   return (
     <Container>
+      <Wrapper>
+        <ArrowBack />
+        <RegisterButton />
+      </Wrapper>
       <WelcomeText>Bem-vindo, Raphael!</WelcomeText>
-      <RegisterPropertyButton></RegisterPropertyButton>
+      
       <ButtonGroup>
         <Button primary>Todos os flats</Button>
         <Button>Indisponíveis</Button>
