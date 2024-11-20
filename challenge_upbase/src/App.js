@@ -1,23 +1,28 @@
+import React from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Home from "./pages/Home";
+import Calendar from "./pages/Calendar";
+import Chat from "./pages/Chat";
+import Profile from "./pages/Profile";
+import BottomNavigationBar from "./Components/BottomNavigationBar";
+import './App.css';
 
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Profile from './pages/Profile';
-import Home from './pages/Home'
-import BottomNavigationBar from './components/BottomNavigationBar'
 
 function App() {
   return (
-    <Router>
-      <div style={{ paddingBottom: 60 }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/calendar" element={<p>calendar</p>} />
-          <Route path="/chat" element={<p>Chat</p>} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
+    <>
+      <div style={{ paddingBottom: "60px" }}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/profile" element={<Profile />} />
+          </Routes>
+        </BrowserRouter>
       </div>
       <BottomNavigationBar />
-    </Router>
+    </>
   );
 }
 
