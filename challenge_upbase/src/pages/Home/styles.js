@@ -4,6 +4,7 @@ export const Container = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
+  font-family: "Jura", sans-serif;
 `;
 
 export const Wrapper = styled.div`
@@ -117,6 +118,8 @@ export const CarouselContainer = styled.div`
   margin-top: 30px;
   width: 100%;
   max-width: 400px;
+  display: flex;
+  align-self: center;
 
   .swiper-pagination {
     position: absolute;

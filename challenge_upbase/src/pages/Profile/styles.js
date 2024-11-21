@@ -8,6 +8,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: "Jura", sans-serif;
 `;
 
 export const Wrapper = styled.div`
@@ -109,7 +110,7 @@ export const CustomTextField = styled(TextField)(() => ({
   export const EditInfoButton = styled(Button)`
   background-color: #8000ff !important;
   color: white !important;
-  text-transform: none;
+  text-transform: capitalize !important;
   margin-top: 20px !important;
   width: 100%;
   font-family: "Jura", sans-serif !important;
