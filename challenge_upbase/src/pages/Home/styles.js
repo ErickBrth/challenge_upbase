@@ -15,7 +15,6 @@ export const Wrapper = styled.div`
 export const WelcomeText = styled.h1`
   font-size: 24px;
   align-self: start;
-  color: #333;
 `;
 
 export const ButtonGroup = styled.div`

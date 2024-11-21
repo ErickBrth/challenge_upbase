@@ -5,7 +5,6 @@ import AddIcon from '@mui/icons-material/Add'
 export const RegisterButton = () => {
   const handleClick = () => {
     console.log('Cadastrar imóvel clicado');
-    // Adicione a lógica para navegação ou ação aqui
   };
 
   return (
