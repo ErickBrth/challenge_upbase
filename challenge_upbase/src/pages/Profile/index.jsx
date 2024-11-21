@@ -127,9 +127,6 @@ const Profile = () => {
           </Stack>
           <EditInfoButton>Editar Informações</EditInfoButton>
         </FormContainer>
-
-        
-
     </Container>
   );
 };
