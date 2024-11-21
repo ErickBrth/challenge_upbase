@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# UpBase Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação React que implementa duas telas do protótipo de um sistema de locação de 
+diárias em acomodações.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🛠️ Tecnologias Usadas
 
-### `npm start`
+- **React**: Biblioteca JavaScript para criação de interfaces de usuário.
+- **React Router DOM**: Gerenciamento de rotas na aplicação.
+- **Material-UI**: Componentes estilizados para React.
+- **Styled-Components**: Estilização de componentes com CSS-in-JS.
+- **Material Icons**: ícones personalizados do Material Icons.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🔧 Instalação e Configuração
 
-### `npm test`
+1. **Clone o repositório**:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
 
-### `npm run build`
+2. **Navegue até o diretório do projeto**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   cd challenge_upbase
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Instale as dependências**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+4. **Inicie o servidor de desenvolvimento**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Acesse o projeto no navegador em: [http://localhost:3000](http://localhost:3000).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🌟 Estrutura do Projeto
 
-## Learn More
+```plaintext
+challenge_upbase/
+├── node_modules/              # Dependências instaladas pelo npm
+├── public/                    # Arquivos públicos (HTML, favicons, etc.)
+├── src/                       # Código-fonte do projeto
+│   ├── Components/            # Componentes reutilizáveis
+│   │   ├── ArrowBack/         # Componente ArrowBack
+│   │   ├── BottomNavigationBar/ # Barra de navegação inferior
+│   │   ├── Button/            # Componente Button
+│   │   ├── Carousel/          # Componente Carousel
+│   │   └── RegisterButton/    # Componente RegisterButton
+│   ├── pages/                 # Páginas do aplicativo
+│   │   ├── Calendar/          # Página Calendar
+│   │   ├── Chat/              # Página Chat
+│   │   ├── Home/              # Página Home
+│   │   ├── Profile/           # Página Profile
+│   │   └── Table/             # Página Table
+│   ├── App.css                # Estilo global do aplicativo
+│   ├── App.js                 # Componente principal do aplicativo
+│   ├── App.test.js            # Testes para o App
+│   ├── index.css              # Estilo CSS global
+│   ├── index.js               # Ponto de entrada do React
+│   ├── logo.svg               # Logotipo do aplicativo
+│   ├── reportWebVitals.js     # Métricas de desempenho
+│   ├── setupTests.js          # Configuração para testes
+│   └── styles.js              # Estilos globais (styled-components)
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ⚙️ Roteamento
 
-### Code Splitting
+O projeto utiliza o `react-router-dom` para navegação entre as seguintes páginas:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Página       | Rota         | Descrição                                    |
+|--------------|--------------|----------------------------------------------|
+| Home         | `/`          | Página inicial da aplicação.                 |
+| Calendar     | `/calendar`  | Exibe o calendário.                          |
+| Table        | `/table`     | Mostra uma tabela de dados.                  |
+| Chat         | `/chat`      | Página de chat para comunicação.             |
+| Profile      | `/profile`   | Página de perfil do usuário.                 |
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Melhorias Futuras
 
-### Making a Progressive Web App
+- Adicionar animações de transição entre as páginas.
+- Implementar autenticação para a página de perfil.
+- Criar páginas de erro personalizadas (404, 500).
+- Adicionar suporte para temas claro e escuro.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📝 Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📧 Contato
 
-### `npm run build` fails to minify
+Se tiver dúvidas ou sugestões, entre em contato:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **E-mail**: erickgomes@ccc.ufcg.edu.br
+- **LinkedIn**: [Erick Araken](https://www.linkedin.com/in/erickaraken/)
