@@ -11,13 +11,23 @@ import {
   InfoContainer,
   InfoIcon,
   InfoItem,
+  FormContainer,
+  CustomTextField,
+  EditInfoButton,
 } from "../Profile/styles";
+
+import {
+    Stack,
+    InputAdornment,
+    IconButton,
+  } from "@mui/material";
 
 import { ArrowBack } from "../../Components/ArrowBack";
 import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
 import CheckIcon from "@mui/icons-material/Check";
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import WatchLaterRoundedIcon from '@mui/icons-material/WatchLaterRounded';
+import DateRangeIcon from "@mui/icons-material/DateRange";
 const Profile = () => {
   return (
     <Container>
@@ -57,6 +67,69 @@ const Profile = () => {
             <span>10 meses no app</span>
           </InfoItem>
         </InfoContainer>
+        <FormContainer>
+          <Stack spacing={2}>
+            <CustomTextField
+              label="Nome e sobrenome"
+              defaultValue="Henrique Rodrigues"
+              variant="filled"
+              fullWidth
+              disabled
+            />
+            <CustomTextField
+              label="CPF"
+              defaultValue="983.724.162-55"
+              variant="filled"
+              fullWidth
+              disabled
+            />
+            <CustomTextField
+              label="Número de celular"
+              defaultValue="(41) 99115-2028"
+              variant="filled"
+              fullWidth
+              disabled
+            />
+            <CustomTextField
+              label="Data de nascimento"
+              defaultValue="04/03/1991"
+              variant="filled"
+              fullWidth
+              disabled
+              slotProps={{
+                input: {
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton edge="end" disabled>
+                        <DateRangeIcon />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                },
+              }}
+            />
+            <CustomTextField
+              label="E-mail"
+              type="email"
+              defaultValue="henrique@e-mail.com.br"
+              variant="filled"
+              fullWidth
+              disabled
+            />
+            <CustomTextField
+              label="Senha"
+              type="password"
+              defaultValue="********"
+              variant="filled"
+              fullWidth
+              disabled
+            />
+          </Stack>
+          <EditInfoButton>Editar Informações</EditInfoButton>
+        </FormContainer>
+
+        
+
     </Container>
   );
 };

@@ -12,6 +12,7 @@ export const NavBar = styled.div`
   justify-content: space-around;
   align-items: center;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 `;
 
 export const NavItem = styled.div`

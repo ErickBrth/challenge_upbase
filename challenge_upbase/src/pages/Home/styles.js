@@ -53,6 +53,7 @@ export const Card = styled.div`
 export const CardImage = styled.img`
   width: 100%;
   height: auto;
+  border-radius: 24px;
 `;
 
 export const CardContent = styled.div`
@@ -63,6 +64,7 @@ export const CardTitleLine = styled.h3`
   display: flex;
   justify-content: space-between;
   margin: 0;
+  font-family: "Jura", sans-serif !important;
 `;
 
 export const CardTitle = styled.h3`
@@ -109,4 +111,33 @@ export const DailyText = styled.h3`
   font-size: 16px;
   margin: 0;
   font-weight: bold;
+`;
+
+export const CarouselContainer = styled.div`
+  margin-top: 30px;
+  width: 100%;
+  max-width: 400px;
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    background-color: #black !important;
+    opacity: 0.5;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    background-color: #7b2cbf !important;
+  }
 `;

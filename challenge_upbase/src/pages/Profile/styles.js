@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Button } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Box, TextField } from "@mui/material";
+
 export const Container = styled.div`
   padding: 20px;
   display: flex;
@@ -82,4 +84,39 @@ export const InfoIcon = styled.div`
   color: #8000ff;
   margin-bottom: 5px;
   font-size: 24px ;
+`;
+
+export const FormContainer = styled(Box)`
+background-color: #FFF;
+padding: 16px;
+margin-top: 16px;
+`;
+
+export const CustomTextField = styled(TextField)(() => ({
+    fontFamily: '"Jura", sans-serif',
+    "& .MuiInputBase-root": {
+      fontFamily: '"Jura", sans-serif',
+      "&.Mui-disabled": {
+        backgroundColor: "#D9D9D9",
+      },
+    },
+    "& .MuiInputLabel-root": {
+      color: "rgba(0, 0, 0, 0.6)",
+      fontFamily: '"Jura", sans-serif',
+    },
+  }));
+
+  export const EditInfoButton = styled(Button)`
+  background-color: #8000ff !important;
+  color: white !important;
+  text-transform: none;
+  margin-top: 20px !important;
+  width: 100%;
+  font-family: "Jura", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: bold;
+  border-radius: 20px;
+  &:hover {
+    background-color: #6a00cc;
+  }
 `;
