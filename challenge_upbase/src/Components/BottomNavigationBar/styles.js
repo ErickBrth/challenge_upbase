@@ -6,7 +6,7 @@ export const NavBar = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 90px;
   background-color: #8000ff;
   display: flex;
   justify-content: space-around;

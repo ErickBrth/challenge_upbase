@@ -6,6 +6,7 @@ import Chat from "./pages/Chat";
 import Profile from "./pages/Profile";
 import BottomNavigationBar from "./Components/BottomNavigationBar";
 import './App.css';
+import Table from "./pages/Table";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/calendar" element={<Calendar />} />
+            <Route path="/table" element={<Table />} />
             <Route path="/chat" element={<Chat />} />
             <Route path="/profile" element={<Profile />} />
           </Routes>

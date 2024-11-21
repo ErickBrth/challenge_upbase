@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import HomeIcon from "@mui/icons-material/Home";
@@ -8,48 +8,53 @@ import ChatIcon from "@mui/icons-material/Chat";
 import PersonIcon from "@mui/icons-material/Person";
 
 const BottomNavigationBar = () => {
+  const [activeTab, setActiveTab] = useState("/"); // Rastreia a aba ativa
+
+  const handleNavigation = (value) => {
+    setActiveTab(value); // Define a aba ativa
+    window.location.href = value; // Navega para a rota correspondente
+  };
+
   return (
     <BottomNavigation
+      value={activeTab}
+      onChange={(event, newValue) => handleNavigation(newValue)}
       style={{
         position: "fixed",
         bottom: 0,
         left: 0,
         right: 0,
+        height: "110px",
         backgroundColor: "#8000ff",
         color: "#fff",
+        borderTopLeftRadius: "25px",
+        borderTopRightRadius: "25px",
       }}
     >
       <BottomNavigationAction
-        label="Home"
         value="/"
-        icon={<HomeIcon />}
-        // style={{ color: value === '/' ? '#fff' : '#ddd' }}
+        icon={<HomeIcon fontSize="large" />}
+        style={{ color: activeTab === "/" ? "#ffffff" : "#cccccc" }}
       />
       <BottomNavigationAction
-        label="Calendar"
         value="/calendar"
-        icon={<CalendarTodayIcon />}
-        // style={{ color: value === '/calendar' ? '#fff' : '#ddd' }}
+        icon={<CalendarTodayIcon fontSize="large" />}
+        style={{ color: activeTab === "/calendar" ? "#ffffff" : "#cccccc" }}
       />
-
       <BottomNavigationAction
-        label="Table"
-        value="/"
-        icon={<ViewListIcon />}
-        // style={{ color: value === '/calendar' ? '#fff' : '#ddd' }}
+        value="/table"
+        icon={<ViewListIcon fontSize="large" />}
+        style={{ color: activeTab === "/table" ? "#ffffff" : "#cccccc" }}
       />
-
       <BottomNavigationAction
-        label="Chat"
         value="/chat"
-        icon={<ChatIcon />}
-        // style={{ color: value === '/chat' ? '#fff' : '#ddd' }}
+        icon={<ChatIcon fontSize="large" />}
+        style={{ color: activeTab === "/chat" ? "#ffffff" : "#cccccc" }}
       />
       <BottomNavigationAction
-        label="Profile"
         value="/profile"
-        icon={<PersonIcon />}
-        // style={{ color: value === '/profile' ? '#fff' : '#ddd' }}
+        icon={<PersonIcon fontSize="large" />}
+        style={{ color: activeTab === "/profile" ? "#ffffff" : "#cccccc" }}
       />
     </BottomNavigation>
   );
